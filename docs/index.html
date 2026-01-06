@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
     <title>Reddit</title>
 </head>
 <body>
-    <h1 class="text-amber-600">Title</h1>
+    <header class="flex justify-between p-2 pr-6 h-14 items-center">
+        <img src="./imgs/logo.png" alt="logo" class="h-11/12">
+        <div class="search-bar w-lg rounded-full h-full bg-linear-to-r from-orange-500 to-yellow-500 focus-within:p-0 p-px">
+            <div class="search-bg w-full h-full bg-white rounded-full flex items-center pl-1 gap-2 focus-within:border-2 border-blue-500">
+                <i class="ri-reddit-fill text-3xl text-orange-700"></i>
+                <input class="text-sm outline-none border-none text-center focus:text-left ring-0 w-full" type="text" name="ask" id="Hi" placeholder="Find anything">
+                <button class="flex gap-1 text-sm cursor-pointer hover:bg-gray-100 p-2 mr-2 rounded-full"><i class="text-orange-700 ri-webhook-line"></i> Ask</button>
+            </div>
+        </div>
+        <div class="action-bar flex gap-3 text-[22px] items-center font-medium">
+            <a class="rounded-full hover:bg-gray-100 flex w-8 items-center justify-center" href="#"><i class="ri-archive-stack-line"></i></a>
+            <a class="rounded-full hover:bg-gray-100 flex w-8 items-center justify-center" href="#"><i class="ri-wechat-2-line"></i></a>
+            <a class="flex gap-1 p-1 text-sm items-center hover:bg-gray-100 rounded-full" href="#"><i class="ri-add-box-line text-lg"></i> Create</a>
+            <a class="rounded-full hover:bg-gray-100 flex w-8 items-center justify-center" href="#"><i class="ri-notification-3-line"></i></a>
+            <div class="profile relative">
+                <img src="https://www.redditstatic.com/avatars/defaults/v2/avatar_default_1.png" class="aspect-square rounded-full h-9" alt="">
+                <div class="active h-2 w-2 bg-green-600 rounded-full absolute bottom-0.5 left-0.5 border border-white"></div>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
