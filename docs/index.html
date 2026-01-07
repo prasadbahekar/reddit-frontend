@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="output.css">
     <title>Reddit</title>
 </head>
-<body>
+<body class="max-h-screen h-screen flex flex-col">
     <header class="flex justify-between p-2 pr-6 h-14 items-center">
         <img src="./imgs/logo.png" alt="logo" class="h-11/12">
         <div class="search-bar w-lg rounded-full h-full bg-linear-to-r from-orange-500 to-yellow-500 focus-within:p-0 p-px">
@@ -28,5 +28,13 @@
             </div>
         </div>
     </header>
+    <div class="body flex h-full w-full min-h-0">
+        <nav class="w-72 sidebar h-full overflow-y-scroll z-10 flex flex-col px-8 py-6 gap-4 border-r border-r-[#ccc] no-scrollbar">
+        </nav>
+        <div class="feed relative">
+            <a class="absolute top-4 left-0 aspect-square w-8 flex items-center justify-center rounded-full -translate-x-1/2 z-10 bg-white border border-[#888]" href="#"><i class="ri-menu-line"></i></a>
+        </div>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
