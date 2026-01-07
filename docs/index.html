@@ -28,13 +28,56 @@
             </div>
         </div>
     </header>
-    <div class="body flex h-full w-full min-h-0">
-        <nav class="w-72 sidebar h-full overflow-y-scroll z-10 flex flex-col px-8 py-6 gap-4 border-r border-r-[#ccc] no-scrollbar">
+    <section class="body flex h-full w-full min-h-0">
+        <nav class="w-72 shrink-0 sidebar h-full overflow-y-scroll z-10 flex flex-col px-8 py-6 gap-4 border-r border-r-[#ccc] no-scrollbar">
         </nav>
-        <div class="feed relative">
+        <div class="relative">
             <a class="absolute top-4 left-0 aspect-square w-8 flex items-center justify-center rounded-full -translate-x-1/2 z-10 bg-white border border-[#888]" href="#"><i class="ri-menu-line"></i></a>
+
         </div>
-    </div>
+        <section class="feed pl-8 pt-2 flex flex-col w-full overflow-y-scroll no-scrollbar">
+            <div class="filters flex gap-4 items-center w-full text-gray-600 pl-4">
+                <a href="#" class="text-sm">Best <i class="ri-arrow-down-s-line"></i></a>
+                <a href="#"><i class="ri-layout-row-line"></i> <i class="ri-arrow-down-s-line text-base"></i></a>
+            </div>
+            <hr class="text-[#eee] my-1">
+            <div class="posts flex flex-col gap-6">
+                <div class="post w-full flex flex-col gap-2 p-4 hover:bg-gray-50 rounded-2xl">
+                    <div class="details flex justify-between items-center w-full">
+                        <div class="flex gap-2 items-center">
+                            <img class="h-6 rounded-full" src="https://styles.redditmedia.com/t5_2r05i/styles/communityIcon_d57tsf7cazif1.png?width=48&height=48&frame=1&auto=webp&crop=48%3A48%2Csmart&s=ca418b6dbcc780eaebdb6f29a0866e22a973848b" alt="">
+                            <p class="text-xs font-medium">r/Minecraft <span class="font-normal text-gray-600">&bull; 21 hr. ago</span></p>
+                        </div>
+                        <a href="#"><i class="ri-more-fill"></i></a>
+                    </div>
+                    <h2 class="text-lg font-medium">CRAFTY and FURNACE</h2>
+                    <div class="media w-full h-128 flex justify-center border border-[#bbb] rounded-2xl">
+                        <img class="h-full max-h-full" src="https://preview.redd.it/crafty-and-furnace-v0-dsaz3jn1lqbg1.jpg?width=1080&crop=smart&auto=webp&s=a6165e81e20463bb0fb75c38054d3dd83118e54d" alt="">
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="votes flex items-center gap-2 py-1 px-4 rounded-full bg-gray-100">
+                            <a href="#"><i class="text-xl ri-arrow-up-circle-line hover:text-red-400"></i></a>
+                            <p class="text-sm font-medium">1.6k</p>
+                            <a href="#"><i class="text-xl ri-arrow-down-circle-line hover:text-gray-600"></i></a>
+                        </div>
+                        <div class="flex items-center gap-1 font-medium py-1 px-4 rounded-full bg-gray-100">
+                            <i class="ri-chat-3-line text-xl"></i>
+                            <p class="text-sm">87</p>
+                        </div>
+                        <div class="flex items-center gap-1 font-medium py-1 px-4 rounded-full bg-gray-100">
+                            <i class="ri-award-line text-xl"></i>
+                        </div>
+                        <div class="flex items-center gap-1 font-medium py-1 px-4 rounded-full bg-gray-100">
+                            <i class="ri-share-forward-line text-xl"></i>
+                            <p class="text-sm">Share</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-lg">
+        </section>
+    </section>
 </body>
 <script src="script.js"></script>
 </html>
