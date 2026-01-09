@@ -168,7 +168,7 @@ posts = [
     name : "r/youtube",
     time : "2 d",
     title : "WHAT (by Spu7nix) A 1.2 M HOUR VIDEO!?",
-    image : "https://preview.redd.it/crafty-and-furnace-v0-dsaz3jn1lqbg1.jpg?width=1080&crop=smart&auto=webp&s=a6165e81e20463bb0fb75c38054d3dd83118e54d",
+    image : "https://preview.redd.it/what-by-spu7nix-a-1-2-m-hour-video-v0-3m3i07vqqtbg1.jpg?width=1080&crop=smart&auto=webp&s=1f50067439a37a77815ed8328c8bae22dacb8ebb",
     votes : "1.6k",
     comments : "87"
   },
