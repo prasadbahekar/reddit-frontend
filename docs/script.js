@@ -5,7 +5,7 @@ const navbarItems = [
   {
     title: null,
     items: {
-      Home: "home-5-line",
+      Home: "home-5-fill",
       Popular: "share-circle-line",
       Explore: "dice-line",
       All: "apps-2-add-line",
@@ -149,3 +149,80 @@ navbarItems.forEach((section, index) => {
     sidebar.appendChild(hr);
   }
 });
+
+
+// ! FEED GENERATION !
+
+posts = [
+  {
+    profile : "https://styles.redditmedia.com/t5_2r05i/styles/communityIcon_d57tsf7cazif1.png?width=48&height=48&frame=1&auto=webp&crop=48%3A48%2Csmart&s=ca418b6dbcc780eaebdb6f29a0866e22a973848b",
+    name : "r/Minecraft",
+    time : "21 hr.",
+    title : "CRAFTY and FURNACE",
+    image : "https://preview.redd.it/crafty-and-furnace-v0-dsaz3jn1lqbg1.jpg?width=1080&crop=smart&auto=webp&s=a6165e81e20463bb0fb75c38054d3dd83118e54d",
+    votes : "1.6k",
+    comments : "87"
+  },
+  {
+    profile : "https://styles.redditmedia.com/t5_2qh44/styles/communityIcon_1vctc2ym3zt51.png?width=48&height=48&frame=1&auto=webp&crop=48%3A48%2Csmart&s=e5c465941b0b45291433c29fe38b43a097f66d0e",
+    name : "r/youtube",
+    time : "2 d",
+    title : "WHAT (by Spu7nix) A 1.2 M HOUR VIDEO!?",
+    image : "https://preview.redd.it/crafty-and-furnace-v0-dsaz3jn1lqbg1.jpg?width=1080&crop=smart&auto=webp&s=a6165e81e20463bb0fb75c38054d3dd83118e54d",
+    votes : "1.6k",
+    comments : "87"
+  },
+  {
+    profile : "https://styles.redditmedia.com/t5_2v5ru/styles/communityIcon_vparsr8ainpa1.png?width=96&height=96&frame=1&auto=webp&crop=96%3A96%2Csmart&s=12b9a20a470b99e403837987bb500a44260fd6d0",
+    name : "r/LinusTechTips",
+    time : "2 d",
+    title : "CRAFTY and FURNACE",
+    image : "https://preview.redd.it/if-it-can-survive-usps-it-can-survive-anything-v0-bamog8eeusbg1.jpg?width=1080&crop=smart&auto=webp&s=d1d64fcf1dd9e3c1281d8ab00876e8447eda2d08",
+    votes : "627",
+    comments : "59"
+  },
+]
+
+const postsContainer = document.querySelector(".posts");
+
+function getString(obj) {
+  const result = `
+    <div class="post w-full flex flex-col gap-2 p-4 hover:bg-gray-50 rounded-2xl">
+      <div class="details flex justify-between items-center w-full">
+          <div class="flex gap-2 items-center">
+              <img class="h-6 rounded-full" src="${obj.profile}" alt="">
+              <p class="text-xs font-medium">${obj.name}<span class="font-normal text-gray-600"> &bull; ${obj.time} ago</span></p>
+          </div>
+          <a href="#"><i class="ri-more-fill"></i></a>
+      </div>
+      <a href="#"><h2 class="text-lg font-medium">${obj.title}</h2></a>
+      <div class="media w-full h-128 flex justify-center border border-[#bbb] rounded-2xl">
+          <img class="h-full max-h-full" src="${obj.image}" alt="">
+      </div>
+      <div class="flex gap-2">
+          <div class="votes flex items-center gap-2 py-1 px-4 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-200">
+              <a href="#"><i class="text-xl ri-arrow-up-circle-line hover:text-red-400"></i></a>
+              <p class="text-sm font-medium">${obj.votes}</p>
+              <a href="#"><i class="text-xl ri-arrow-down-circle-line hover:text-gray-600"></i></a>
+          </div>
+          <div class="flex items-center gap-1 font-medium py-1 px-4 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-200">
+              <i class="ri-chat-3-line text-xl"></i>
+              <p class="text-sm">${obj.comments}</p>
+          </div>
+          <div class="flex items-center gap-1 font-medium py-1 px-4 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-200">
+              <i class="ri-award-line text-xl"></i>
+          </div>
+          <div class="flex items-center gap-1 font-medium py-1 px-4 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-200">
+              <i class="ri-share-forward-line text-xl"></i>
+              <p class="text-sm">Share</p>
+          </div>
+      </div>
+    </div>
+  `
+  return result;
+}
+
+for (let i = 0; i < posts.length; i++) {
+  const post = posts[i];
+  postsContainer.innerHTML += getString(post);
+}
