@@ -226,3 +226,55 @@ for (let i = 0; i < posts.length; i++) {
   const post = posts[i];
   postsContainer.innerHTML += getString(post);
 }
+
+
+// ! RECENT POSTS !
+
+
+recentPosts = [
+  {
+    channel : "https://styles.redditmedia.com/t5_2v5ru/styles/communityIcon_vparsr8ainpa1.png?width=48&height=48&frame=1&auto=webp&crop=48%3A48%2Csmart&s=74a703f601a9da07b343037de83b60d01a15fc22",
+    name : "r/LinusTechTips",
+    title : "If it can survive USPS, it can Survive Anything",
+    time : "2d",
+    votes : "627",
+    comments : "59",
+    img : "https://b.thumbs.redditmedia.com/6I0cVgHXSvmxPmOY4RnbS5vBBwEq7bFiQpf_DvpFoSk.jpg"
+  },
+  {
+    channel : "https://styles.redditmedia.com/t5_2qh44/styles/communityIcon_1vctc2ym3zt51.png?width=48&height=48&frame=1&auto=webp&crop=48%3A48%2Csmart&s=e5c465941b0b45291433c29fe38b43a097f66d0e",
+    name : "r/youtube",
+    title : "WHAT (by Spu7nix) A 1.2 M HOUR VIDEO!?",
+    time : "3d",
+    votes : "717",
+    comments : "28",
+    img : "https://b.thumbs.redditmedia.com/U6-ncR792-6YyKX0Ar2m0nsQsbgUV0BFEr-JP9KHoVI.jpg"
+  },
+]
+
+
+function generateRecentPosts (obj) {
+  return `
+    <div class="post flex justify-between gap-6">
+      <div>
+          <div class="flex gap-2 items-center mb-2">
+              <img class="h-6 rounded-full cursor-pointer" src="${obj.channel}" alt="">
+              <p class="text-xs text-gray-700"><span class="hover:underline cursor-pointer">${obj.name}</span><span class="font-normal text-gray-600"> &bull; ${obj.time} ago</span></p>
+          </div>
+          <h4 class="text-sm font-medium text-gray-600 mb-4 cursor-pointer hover:underline">${obj.title}</h4>
+          <p class="text-xs text-gray-600">${obj.votes} upvotes <span class="font-normal text-gray-600"> &bull; ${obj.comments} comments</span></p>
+      </div>
+      <div class="h-20 w-20 shrink-0">
+          <img class="h-full w-full rounded" src="${obj.img}" alt="">
+      </div>
+    </div>
+  `
+}
+
+const recentPostsContainer = document.querySelector(".recent-posts");
+
+for (let i = 0; i < recentPosts.length; i++) {
+  const post = recentPosts[i];
+  recentPostsContainer.innerHTML += generateRecentPosts(post);
+  if (i != recentPosts.length - 1) {recentPostsContainer.innerHTML += '<hr class="m-0 text-gray-300">'}
+}

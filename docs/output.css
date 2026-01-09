@@ -225,6 +225,9 @@
   .z-10 {
     z-index: 10;
   }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
+  }
   .my-1 {
     margin-block: calc(var(--spacing) * 1);
   }
@@ -583,6 +586,9 @@
   .text-blue-600 {
     color: var(--color-blue-600);
   }
+  .text-gray-200 {
+    color: var(--color-gray-200);
+  }
   .text-gray-300 {
     color: var(--color-gray-300);
   }
@@ -669,6 +675,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-red-400);
+      }
+    }
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
       }
     }
   }
