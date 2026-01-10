@@ -10,7 +10,7 @@
 <body class="max-h-screen h-screen flex flex-col">
     <header class="flex justify-between p-2 pr-6 h-14 items-center">
         <img src="./imgs/logo.png" alt="logo" class="h-11/12">
-        <div class="search-bar w-lg rounded-full h-full bg-linear-to-r from-orange-500 to-yellow-500 focus-within:p-0 p-px">
+        <div class="sm:inline-block hidden search-bar w-lg rounded-full h-full bg-linear-to-r from-orange-500 to-yellow-500 focus-within:p-0 p-px">
             <div class="search-bg w-full h-full bg-white rounded-full flex items-center pl-1 gap-2 focus-within:border-2 border-blue-500">
                 <i class="ri-reddit-fill text-3xl text-orange-700"></i>
                 <input class="text-sm outline-none border-none text-center focus:text-left ring-0 w-full" type="text" name="ask" id="Hi" placeholder="Find anything">
@@ -18,9 +18,11 @@
             </div>
         </div>
         <div class="action-bar flex gap-3 text-[22px] items-center font-medium">
-            <a class="rounded-full hover:bg-gray-100 flex w-8 items-center justify-center" href="#"><i class="ri-archive-stack-line"></i></a>
-            <a class="rounded-full hover:bg-gray-100 flex w-8 items-center justify-center" href="#"><i class="ri-wechat-2-line"></i></a>
-            <a class="flex gap-1 p-1 text-sm items-center hover:bg-gray-100 rounded-full" href="#"><i class="ri-add-box-line text-lg"></i> Create</a>
+            <a class="flex sm:hidden rounded-full hover:bg-gray-100 w-8 items-center justify-center" href="#"><i class="ri-webhook-line"></i></a>
+            <a class="flex sm:hidden rounded-full hover:bg-gray-100 w-8 items-center justify-center" href="#"><i class="ri-search-line"></i></a>
+            <a class="sm:flex hidden rounded-full hover:bg-gray-100 w-8 items-center justify-center" href="#"><i class="ri-archive-stack-line"></i></a>
+            <a class="sm:flex hidden rounded-full hover:bg-gray-100 w-8 items-center justify-center" href="#"><i class="ri-wechat-2-line"></i></a>
+            <a class="flex gap-1 p-1 text-sm items-center hover:bg-gray-100 rounded-full" href="#"><i class="ri-add-large-line text-lg"></i> <span class="sm:inline-block hidden">Create</span></a>
             <a class="rounded-full hover:bg-gray-100 flex w-8 items-center justify-center" href="#"><i class="ri-notification-3-line"></i></a>
             <div class="profile relative">
                 <img src="https://www.redditstatic.com/avatars/defaults/v2/avatar_default_1.png" class="aspect-square rounded-full h-9" alt="">
@@ -32,7 +34,7 @@
         <nav class="w-72 shrink-0 hidden xl:flex sidebar h-full overflow-y-scroll z-10 flex-col px-8 py-6 gap-4 border-r border-r-[#ccc] no-scrollbar">
         </nav>
         <div class="relative hidden xl:block"><a class="absolute top-4 left-0 aspect-square w-8 flex items-center justify-center rounded-full -translate-x-1/2 z-10 bg-white border border-[#888]" href="#"><i class="ri-menu-line"></i></a></div>
-        <section class="feed pt-2 flex flex-col pl-8 w-full overflow-y-scroll no-scrollbar">
+        <section class="feed pt-2 flex flex-col sm:pl-8 w-full overflow-y-scroll no-scrollbar">
             <div class="filters flex gap-4 items-center w-full text-gray-600 pl-4">
                 <a href="#" class="text-sm">Best <i class="ri-arrow-down-s-line"></i></a>
                 <a href="#"><i class="ri-layout-row-line"></i> <i class="ri-arrow-down-s-line text-base"></i></a>
